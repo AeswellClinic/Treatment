@@ -6,357 +6,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800&display=swap" rel="stylesheet">
-
-    <style>
-        * {
-            font-family: "Prompt", sans-serif;
-        }
-
-        .treatment-section {
-            display: flex;
-            align-items: center;
-            background-color: #f4f4f4;
-            padding: 20px;
-            border-radius: 15px;
-            max-width: 1200px;
-            margin: 20px auto;
-            background-image: url('img/Group 538.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 375px;
-            width: 100%;
-        }
-
-        .treatment-section-end {
-            align-items: center;
-            background-color: #f4f4f4;
-            padding: 20px;
-            border-radius: 15px;
-            max-width: 1200px;
-            margin: 20px auto;
-            background-image: url('img/Group 538.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 375px;
-            width: 100%;
-        }
-
-        .treatment-section:nth-child(2) {
-            background-image: url('img/Group 542.png');
-        }
-
-        .treatment-section:nth-child(3) {
-            background-image: url('img/Group 543.png');
-        }
-
-        .treatment-section:nth-child(4) {
-            background-image: url('img/Group 544.png');
-        }
-
-        .treatment-section:nth-child(5) {
-            background-image: url('img/Group 545.png');
-        }
-
-        .treatment-section:nth-child(6) {
-            background-image: url('img/Group 431.png');
-        }
-
-        .treatment-image {
-            flex: 1;
-        }
-
-        .treatment-image img {
-            max-width: 100%;
-            border-radius: 15px;
-            object-fit: cover;
-        }
-
-        .treatment-description {
-            flex: 1;
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 20px;
-            width: 70%;
-            max-width: 500px;
-            margin: 0 auto;
-            height: 90%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .treatment-description-end {
-            height: 100%;
-            flex: 1;
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            padding: 20px;
-            border-radius: 15px;
-            width: 100%;
-            box-sizing: border-box;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .treatment-description-end ul {
-            list-style-type: none;
-            padding-left: 0;
-            margin: 0 auto;
-            display: inline-block;
-            text-align: left;
-        }
-
-        .treatment-description-end ul li {
-            color: #333;
-            margin-bottom: 10px;
-            position: relative;
-            padding-left: 25px;
-        }
-
-        .treatment-description-end ul li::before {
-            content: '';
-            position: absolute;
-            left: -20px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 5px;
-            height: 5px;
-            background-color: #000000;
-            border-radius: 50%;
-        }
-
-        .treatment-description h2,
-        .treatment-description-end h2 {
-            color: #872d2f;
-            margin-bottom: 10px;
-            text-align: center;
-            font-size: 25px;
-            margin-bottom: 15px;
-        }
-
-        .treatment-description p,
-        .treatment-description-end p {
-            color: #333;
-            margin-bottom: 20px;
-            text-align: center;
-            font-size: 17px;
-            margin-top: 5px;
-        }
-
-        .treatment-description ul {
-            list-style-type: none;
-            padding-left: 0;
-            text-align: left;
-            margin: 0 auto;
-            max-width: 200px;
-        }
-
-        .treatment-description ul li {
-            color: #333;
-            margin-bottom: 10px;
-            position: relative;
-            padding-left: 25px;
-        }
-
-        .treatment-description ul li::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 5px;
-            height: 5px;
-            background-color: #000000;
-            border-radius: 50%;
-        }
-
-        .treatment-section:last-child .treatment-description {
-            width: 100%;
-            max-width: none;
-            padding: 20px;
-            margin: 20px;
-            flex: 1;
-        }
-
-        .treatment-section-container {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        @media (max-width: 1024px) {
-            .treatment-section-container>.treatment-section:nth-child(-n+3) .treatment-description ul {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                padding-left: 0;
-                margin: 0;
-                max-width: 500px;
-            }
-
-            .treatment-section-container>.treatment-section:nth-child(-n+3) .treatment-description ul li {
-                flex: 0 0 50%;
-                box-sizing: border-box;
-                margin-bottom: 10px;
-                padding-left: 20px;
-                font-size: 13px;
-            }
-
-            .treatment-section-container>.treatment-section:nth-child(-n+3) .treatment-description ul li::before {
-                left: 10px;
-            }
-
-            .treatment-section {
-                margin-bottom: 20px;
-            }
-        }
-
-        @media (min-width: 700px) and (max-width: 1024px) {
-            .treatment-section-container {
-                grid-template-columns: 1fr 1fr;
-                gap: 20px;
-            }
-
-            .treatment-section,
-            .treatment-section-end {
-                flex-direction: column;
-                max-width: 330px;
-                margin-bottom: -15px;
-                position: relative;
-                height: 500px;
-                padding: 10px;
-            }
-
-            .treatment-description {
-                position: absolute;
-                bottom: 0px;
-                left: 0px;
-                right: 0px;
-                transform: none;
-                width: auto;
-                max-width: none;
-                margin-top: 0;
-                height: 229px;
-                justify-content: flex-start;
-            }
-
-            .treatment-description h2,
-            .treatment-description-end h2 {
-                font-size: 20px;
-            }
-
-            .treatment-description p,
-            .treatment-description-end p {
-                font-size: 15px;
-            }
-
-            .treatment-description-end ul li::before {
-                left: 0;
-            }
-
-            .treatment-description ul {
-                font-size: 13px;
-            }
-        }
-
-        @media (max-width: 699px) {
-            .treatment-section {
-                flex-direction: column;
-                max-width: 100%;
-                margin-bottom: 20px;
-                height: 59vh;
-                max-height: 100vh;
-                position: relative;
-                box-sizing: border-box;
-                overflow-y: auto;
-            }
-
-            .treatment-description {
-                position: absolute;
-                bottom: 0;
-                left: 50%;
-                transform: translateX(-50%);
-                width: 90%;
-                max-width: none;
-                margin-top: 0;
-                height: auto;
-                padding: 20px;
-                border-radius: 15px;
-            }
-
-            .treatment-description h2,
-            .treatment-description-end h2 {
-                font-size: 18px !important;
-                margin: 0;
-            }
-
-            .treatment-description p,
-            .treatment-description-end p {
-                font-size: 15px;
-            }
-
-            .treatment-description {
-                position: absolute;
-                bottom: 5px;
-                left: 5px;
-                right: 5px;
-                transform: none;
-                width: auto;
-                max-width: none;
-                margin-top: 0;
-                height: 200px;
-                justify-content: center;
-            }
-
-            .treatment-description ul {
-                font-size: 13px;
-            }
-
-            .treatment-description-end ul li {
-                font-size: 15px;
-            }
-
-            .treatment-description-end ul li::before {
-                left: 0;
-            }
-
-            .treatment-section-container {
-                gap: 0;
-                padding: 20px;
-            }
-
-            .treatment-section-end {
-                padding: 5px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="treatment-section-container">
         <div class="treatment-section">
             <div class="treatment-image"></div>
-            <div class="treatment-description">
+            <div class="treatment-description-end">
                 <h2>Program Whitening Treatment</h2>
-                <p>ให้ผิวของคุณกลับมาสดใสและกระจ่างใส <br>ลดจุดด่างดำด้วยการผลัดเซลล์ผิวอย่างอ่อนโยน</p>
+                <p>ให้ผิวของคุณกลับมาสดใสและกระจ่างใสลดจุดด่างดำ<br>
+                    ด้วยการผลัดเซลล์ผิวอย่างอ่อนโยนเหมาะสำหรับผู้ที่มี <br>ปัญหาผิวหมองคล้ำรอยดำสิวร่วมกับผิวแห้งขาดความ ชุ่มชื้น <br> เน้นการผลัดผิวอย่างอ่อนโยน</p>
+               
+            </div>
+        </div>
+
+        <div class="treatment-additional-info">
+            <h3>ด้วยผลิตภัณฑ์นำเข้าจาก<span><br>สหรัฐอเมริกาและยุโรป</span></h3>
+        </div>
+        <div class="product-card-container">
+            <div class="product-card">
+                <img src="img/endocare-logo 1.png" alt="Product 1">
+                <div class="text-container">
+                    <h3>Repechage</h3>
+                    <p>แบรนด์สหรัฐฯใช้สาหร่ายทะเลเพื่อ<br>
+                        ฟื้นฟูและเพิ่มความชุ่มชื้นให้ผิว</p>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="img/endocare-logo 1 (1).png" alt="Product 2">
+                <div class="text-container">
+                <h3>Wilma Schumann</h3>
+                <p>แบรนด์ยุโรปเน้นวิตามินและกรด<br>ไฮยาลูรอนิค ลดริ้วรอยและเพิ่มความชุ่มชื้น</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/endocare-logo 1 (2).png" alt="Product 3">
+                <div class="text-container">
+                <h3>Endocare</h3>
+                <p>แบรนด์สเปนใช้สารสกัดหอยทาก<br>
+                    กระตุ้นคอลลาเจนและฟื้นฟูผิว</p>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="treatment-section">
+            <div class="treatment-description">
+                <h2>Program Nourishing Treatment</h2>
+                <p>เผยผิวใส เปล่งปลั่งเหมาะสำหรับผู้มีปัญหาผิวหมองคล้ำ รอยสิว ผิวแห้ง ขาดความชุ่มชื้น</p>
                 <ul>
-                    <li>Miami Peel</li>
-                    <li>Cherry C Whitening</li>
-                    <li>Whitening</li>
-                    <li>Nourishing</li>
-                    <li>Double Whitening</li>
-                    <li>Absolute Nourishing</li>
+                    <li>ผลัดเซลล์ผิวอย่างอ่อนโยนด้วย Gommage</li>
+                    <li>มาส์กกระจ่างใสด้วยสารสกัดจากกรดผลไม้</li>
+                    <li>มาส์กวิตามินผิวจาก Sea mud และสาหร่ายทะเลสีน้ำตาล</li>
+                    <li>มาส์กเพิ่มความชุ่มชื้นจาก Shea Butter และ St. John's Wort</li>
+                    <li>นวดผ่อนคลายกล้ามเนื้อใบหน้าและคอบ่าไหล่ 16 ขั้นตอน</li>
+                    <li>บำบัดเย็นด้วยเครื่อง Cryotherapy</li>
+                    <li>บำรุงผิวด้วยผลิตภัณฑ์จาก Endocare</li>
+                </ul>
+            </div>
+            <div class="treatment-image"></div>
+        </div>
+
+        <div class="treatment-section">
+            <div class="treatment-image"></div>
+            <div class="treatment-description">
+                <h2>Program Lymphatic Treatment</h2>
+                <p>ผสานเทคนิคนวดจากแพทย์แผนปัจจุบันและตะวันออกเพื่อกระตุ้น <br>
+                    การไหลเวียนโลหิตและการสร้างคอลลาเจน </p>
+                <ul>
+                    <li>มาส์กวิตามินเพิ่มความกระจ่างใสด้วย Zinc และ Sulfur ช่วยกำจัดของเสียและฆ่าเชื้อสิว</li>
+                    <li>มาส์กเพิ่มความชุ่มชื้นด้วยสารสกัดจาก seaweed extract และ chamomille</li>
+                    <li>นวดกัวซาร้อนที่ใบหน้าเปิดผิวพร้อมกดจุดกระตุ้นและระบายน้ำเหลือง</li>
+                    <li>นวดกัวซาเย็นด้วยหินหยกขาว ปิดผิวพร้อมยกกระชับ</li>
+                    <li>ปรนนิบัติผิวด้วยผลิตภัณฑ์จาก Q-Skinscience</li>
                 </ul>
             </div>
         </div>
@@ -364,68 +88,19 @@
         <div class="treatment-section">
             <div class="treatment-description">
                 <h2>Program Hydrating Treatment</h2>
-                <p>เติมความชุ่มชื้นให้กับผิวที่แห้งกร้าน<br>ลดริ้วรอยเล็ก ๆ และทำให้ผิวดูอิ่มน้ำ</p>
+                <p>เพิ่มความชุ่มชื้น และลดการอักเสบของผิว เหมาะสำหรับ<br>
+                    ผู้ที่มีผิวแห้ง อักเสบ ไหม้แดด</p>
                 <ul>
-                    <li>Seaweed Mask</li>
-                    <li>Hydrating</li>
-                    <li>Super Hydrating</li>
-                    <li>Blackberry Hydrating</li>
+                    <li>ผลัดเซลล์ผิวอย่างอ่อนโยนด้วยกรดผลไม้</li>
+                    <li>มาส์กเพิ่มความชุ่มชื้นจาก Honey & Almond extract, Seaweed extract, และ Chamomille</li>
+                    <li>นวดบำบัดเย็นด้วย Cryotherapy</li>
+                    <li>นวดผ่อนคลายกล้ามเนื้อใบหน้า 11 ขั้นตอน</li>
                 </ul>
             </div>
             <div class="treatment-image"></div>
         </div>
 
-        <div class="treatment-section">
-            <div class="treatment-image"></div>
-            <div class="treatment-description">
-                <h2>Program Guasha Treatment</h2>
-                <p>เพิ่มความกระชับและทำให้ผิวสดใสด้วยการนวด<br>ที่ช่วยกระตุ้นการไหลเวียนเลือด</p>
-                <ul>
-                    <li>Lymphatic Treatment</li>
-                    <li>Guasha Whitening</li>
-                    <li>Guasha Hydrating</li>
-                    <li>Guasha Anti-aging</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="treatment-section">
-            <div class="treatment-description">
-                <h2>Program Anti-aging Treatment</h2>
-                <p>ลดเลือนริ้วรอยและฟื้นฟูผิว<br>ให้กลับมาอ่อนเยาว์ด้วยสารบำรุงเข้มข้น</p>
-                <ul>
-                    <li>Collagen Refirming</li>
-                    <li>Phytostemcell</li>
-                    <li>Excellent Age-defying</li>
-                </ul>
-            </div>
-            <div class="treatment-image"></div>
-        </div>
-
-        <div class="treatment-section">
-            <div class="treatment-image"></div>
-            <div class="treatment-description">
-                <h2>Program Phonophoresis Treatment</h2>
-                <p>ใช้คลื่นความถี่เพื่อให้สารบำรุงซึมเข้าสู่ผิวได้ดีขึ้น<br>ทำให้ผิวได้รับการบำรุงอย่างล้ำลึก</p>
-                <ul>
-                    <li>Facial Blink</li>
-                    <li>Hydrafacial</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="treatment-section-end">
-            <div class="treatment-image"></div>
-            <div class="treatment-description-end">
-                <h2>บริการเสริม</h2>
-                <ul>
-                    <li>AcneClearlight : ทรีตเมนต์แสงบำบัดลดสิวอักเสบและรอยแดง</li>
-                    <li>TrichoLASE : เลเซอร์ฟื้นฟูผิว กระตุ้นการสร้างคอลลาเจนใหม่</li>
-                    <li>Instant Calming Mask: มาสก์บำรุงลดการอักเสบและปลอบประโลมผิว</li>
-                    <li>Rejuran Soothing Mask : มาสก์เพิ่มความชุ่มชื้น ฟื้นฟูผิวที่แพ้ง่าย</li>
-                </ul>
-            </div>
-        </div>
+      
     </div>
 </body>
 
